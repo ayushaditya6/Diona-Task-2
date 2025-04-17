@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Worker Progress Report</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-left">
+        <img src="logo.png" alt="WCB Manitoba Logo" />
+      </div>
+      <div class="header-center">
+        <h2>Workers Compensation Board of Manitoba</h2>
+      </div>
+      <div class="header-right">
+        <p><strong>333 Broadway</strong><br>
+        Winnipeg, MB R3C 4W3<br>
+        Phone: (204) 954-4321<br>
+        Toll Free: 1-855-954-4321<br>
+        <a href="https://wcb.mb.ca">wcb.mb.ca</a></p>
+      </div>
+    </header>
+
+    <h1>Worker Progress Report</h1>
+    <p class="claim">Claim No. <strong>20042047 WP</strong></p>
+
+    <form id="progress-form">
+      <fieldset>
+        <legend>Return to Work Status</legend>
+        <label><input type="radio" name="returnStatus" value="Not returned"> I have not returned to work</label>
+        <label><input type="radio" name="returnStatus" value="Returned"> I returned to work on:
+          <input type="date" name="returnDate">
+        </label>
+        <label>Duties:
+          <select name="duties">
+            <option>Full duties, regular hours</option>
+            <option>Full duties, reduced hours</option>
+            <option>Modified duties, regular hours</option>
+            <option>Modified duties, reduced hours</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Return Expectations & Concerns</legend>
+        <label>I expect to return on: <input type="date" name="expectedReturn"></label>
+        <label>Concerns: <textarea name="concerns" placeholder="Describe any concerns..."></textarea></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Recovery Status</legend>
+        <label><input type="radio" name="recoveryStatus" value="Not recovered"> I have not fully recovered</label>
+        <label><input type="radio" name="recoveryStatus" value="Recovered"> I have fully recovered</label>
+        <label>Comments: <textarea name="recoveryComments"></textarea></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Pain / Discomfort</legend>
+        <label>Rate your pain level (1–10): <input type="number" min="1" max="10" name="painLevel"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Medical Treatment</legend>
+        <label><input type="radio" name="treatmentStatus" value="None"> I am not receiving treatment</label>
+        <label><input type="radio" name="treatmentStatus" value="Receiving"> I am receiving treatment from:
+          <input type="text" name="providerType" placeholder="e.g. Physiotherapist">
+        </label>
+        <label>Last treatment date: <input type="date" name="lastTreatmentDate"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Medication & Exercises</legend>
+        <label><input type="checkbox" name="takingMeds"> I am taking medication</label>
+        <label>Medication: <input type="text" name="medicationName"></label>
+        <label><input type="checkbox" name="doingExercises"> I am doing home exercises</label>
+        <label>Exercises: <textarea name="exercises"></textarea></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Comments</legend>
+        <textarea name="additionalInfo" placeholder="Provide any additional info..."></textarea>
+      </fieldset>
+
+      <div class="footer-note">
+        <p>I understand that the Privacy Notice applies to the personal information collected in this document.</p>
+      </div>
+
+      <button type="submit">Confirm & Display</button>
+    </form>
+
+    <div id="confirmation-text" style="display: none;"></div>
+    <button id="download-pdf" style="display: none;">Download as PDF</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

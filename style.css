@@ -1,0 +1,88 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 750px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+/* Header Layout */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.header-left img {
+  height: 60px;
+}
+
+.header-center {
+  flex: 1;
+  text-align: center;
+}
+
+.header-right {
+  text-align: right;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+h1 {
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.claim {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+form fieldset {
+  border: 1px solid #aaa;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+form legend {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+label {
+  display: block;
+  margin: 8px 0;
+}
+
+textarea,
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+  display: block;
+  margin-top: 5px;
+  padding: 5px;
+  width: 100%;
+  max-width: 400px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.footer-note {
+  font-size: 13px;
+  margin-top: 20px;
+}
